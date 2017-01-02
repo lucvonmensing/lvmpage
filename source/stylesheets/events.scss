@@ -1,0 +1,18 @@
+.events {
+  border-top: 1px solid $color__text--light;
+  text-align: left;
+}
+
+.events__entry {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #666;
+}
+
+.events__city {
+  font-family: Roboto, sans-serif;
+}
+
+.events__meta {
+  color: $color__text--light
+}

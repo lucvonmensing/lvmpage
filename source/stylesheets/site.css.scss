@@ -1,6 +1,10 @@
 @charset "utf-8";
 @import "normalize";
 
+$color__border--dark: #333333;
+$color__text--light: #f4f4f4;
+$color__text--dark: #1b1b1b;
+
 body {
   text-align: center;
   font-family: "Droid Serif", serif;
@@ -17,6 +21,10 @@ h1 {
 .header {
   background-color: white;
   padding: 2em;
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
 }
 
 .header__logo {
@@ -29,7 +37,8 @@ h1 {
   justify-content: center;
   align-items: center;
   background-size: cover;
-  height: calc(100vh - 85px)
+  padding-top: 85px;
+  height: calc(100vh - 85px);
 }
 
 .content {
@@ -52,4 +61,58 @@ h1 {
   padding-top: 0;
   height: 0;
   overflow: hidden;
+}
+
+.social {
+  padding: 1em;
+}
+
+.social-icon {
+  display: inline-block;
+}
+
+.social-icon__link {
+  background: $color__border--dark;
+  position: relative;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.25s linear;
+}
+
+.social-icon svg {
+  height: 24px;
+  width: 24px;
+}
+
+@media (min-width: 768px) {
+  .social-icon__link {
+    height: 60px;
+    width: 60px;
+  }
+
+  .social-icon svg {
+    height: 38px;
+    width: 38px;
+  }
+}
+
+.social-icon__link:hover {
+  opacity: .6;
+}
+
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }

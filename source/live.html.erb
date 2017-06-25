@@ -2,14 +2,16 @@
 title: Live - Luc von Mensing
 ---
 
-<div class="events">
-
-  <% data.live.events.each do |d| %>
-      <div class="events__entry" itemscope itemtype="http://schema.org/Event">
-        <div class="events__city"><%= d.city %></div>
-        <div class="events__meta"><span itemprop="startDate" content="<%= d.date.strftime('%F') %>"><%= d.date.strftime('%d.%-m') %></span>
-          <span itemprop="location" itemscope itemtype="http://schema.org/Place"><%= d.location %></span></div>
-      </div>
-  <% end %>
-
-</div>
+<section>
+  <h1 class="section__headline">Live</h1>
+  <div class="events">
+    <% data.live.events.each do |d| %>
+        <div class="events__entry" itemscope itemtype="http://schema.org/Event">
+          <div class="content-box__title"><%= d.city %></div>
+          <div class="content-box__info">
+            <span itemprop="startDate" content="<%= d.date.strftime('%F') %>"><%= d.date.strftime('%d.%-m') %></span>
+            <span itemprop="location" itemscope itemtype="http://schema.org/Place"><%= d.location %></span></div>
+        </div>
+    <% end %>
+  </div>
+</section>

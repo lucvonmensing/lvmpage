@@ -1,0 +1,16 @@
+---
+title: Musik - Luc von Mensing
+---
+
+<section class="about">
+  <h3 class="section__subheadline"><%= data.wir.subheadline %></h3>
+  <h1 class="section__headline"><%= data.wir.title %></h1>
+  <div class="content-box__meta">
+    <%= tag :img, :alt => 'Die Band', :src => data.wir.image %>
+    <div class="content-box__info">
+      <% data.wir.copy.each do |p| %>
+          <p class="about__copy"><%= p %></p>
+      <% end %>
+    </div>
+  </div>
+</section>

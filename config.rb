@@ -30,11 +30,11 @@ set :js_dir, 'assets/javascript'
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def nav_active(path, item_class)
+    current_page.path == path ? "#{item_class} #{item_class}-active" : item_class
+  end
+end
 
 # Build-specific configuration
 configure :build do

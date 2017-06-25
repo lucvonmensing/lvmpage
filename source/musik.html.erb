@@ -1,0 +1,21 @@
+---
+title: Musik - Luc von Mensing
+---
+
+<section class="music">
+  <h1 class="section__headline">Musik</h1>
+
+  <div class="grid grid--gutters">
+    <% data.musik.items.each do |item| %>
+        <div class="grid__cell">
+          <div class="content-box music__entry">
+            <div class="content-box__meta">
+              <div class="content-box__title events__title"><%= item.title %></div>
+              <div class="content-box__info events__type"><%= item.type %></div>
+            </div>
+              <%= tag :img, :alt => "#{item.title} - #{item.type}", :src => item.src %>
+          </div>
+        </div>
+    <% end %>
+  </div>
+</section>

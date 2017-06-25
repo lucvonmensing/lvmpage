@@ -3,12 +3,11 @@
 <head>
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta charset="utf-8">
-  <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
+  <meta content="width=device-width,initial-scale=1.0" name="viewport">
   <title><%= current_page.data.title || 'Luc von Mensing' %></title>
   <%= javascript_include_tag :"webfontloader" %>
-  <script async defer>WebFont.load({google: {families: ['Droid+Serif:300,400', 'Roboto']}});</script>
-  <%= stylesheet_link_tag :site %>
-  <%= javascript_include_tag :all %>
+  <%= stylesheet_link_tag :styles %>
+  <%= javascript_include_tag :webfontloader %>
   <%= favicon_tag 'favicon.ico' %>
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

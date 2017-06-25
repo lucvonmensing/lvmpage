@@ -9,21 +9,21 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
-set :haml, {:ugly => true, :format => :html5}
-
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
-
-# General configuration
 activate :directory_indexes
 
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload, :no_swf => true
 end
+
+activate :external_pipeline,
+         name: :webpack,
+         command: build? ? './node_modules/webpack/bin/webpack.js --bail -p' : './node_modules/webpack/bin/webpack.js --watch --color -d',
+         source: '.tmp/dist',
+         latency: 1
+
+set :css_dir, 'assets/stylesheets'
+set :js_dir, 'assets/javascript'
 
 ###
 # Helpers
@@ -38,11 +38,6 @@ end
 
 # Build-specific configuration
 configure :build do
-  activate :autoprefixer do |config|
-    config.browsers = ['last 2 versions', 'Explorer >= 9']
-  end
   activate :minify_html
-  activate :minify_css
-  activate :minify_javascript
   activate :asset_hash
 end

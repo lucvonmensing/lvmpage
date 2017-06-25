@@ -1,19 +1,16 @@
 events:
-  - date: 2017-03-12
-    city: "Oldenburg"
-    location: "Umbaubar"
-  - date: 2017-05-08
-    city: "Berlin"
-    location: "Froschkönig"
-  - date: 2017-06-12
-    city: "Scheßel"
-    location: "Hurrican"
-  - date: 2017-06-30
-    city: "Lingen"
-    location: "Abifestival 2017"
-  - date: 2017-07-05
-    city: "Bremen"
-    location: "Breminale 2017"
-  - date: 2017-07-20
-    city: "Seeflughafen Cuxhaven Nordholz"
-    location: "Deichbrand Festival 2017"
+  - date: 2017-07-01
+    location: Abifestival
+    city: Lingen
+  - date: 2017-07-07
+    location: Breminale
+    city: Bremen
+  - date: 2017-07-22
+    location: Deichbrand Festival
+    city: Cuxhaven
+  - date: 2017-08-12
+    location: Open Air
+    city: Wardenburg
+  - date: 2017-09-09
+    location: Suedbar
+    city: Wilhelmshaven

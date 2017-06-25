@@ -14,6 +14,8 @@ title: Musik - Luc von Mensing
               <div class="content-box__info events__type"><%= item.type %></div>
             </div>
               <%= tag :img, :alt => "#{item.title} - #{item.type}", :src => item.src %>
+
+            <%= item.webplayer %>
           </div>
         </div>
     <% end %>

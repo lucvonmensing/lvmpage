@@ -7,3 +7,20 @@ title: Luc von Mensing
           src="https://www.youtube.com/embed/<%= data.frontpage.video_id %>?autoplay=0&origin=https://www.lucvonmensing.de"
           frameborder="0"></iframe>
 </div>
+
+<% if false %>
+<section class="container">
+  <h3 class="section__headline">
+    <a class="section__headline--link" href="https://instagram.com/lucvonmensing">
+      Folge uns auf Instagram
+    </a>
+  </h3>
+  <div class="instagram">
+    <% (1..6).each do |i| %>
+        <div class="instagram__entry">
+          <a class="content__preload"></a>
+        </div>
+    <% end %>
+  </div>
+</section>
+<% end %>

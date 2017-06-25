@@ -55,7 +55,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-header__nav-item {
   text-decoration: none;
-  color: $color__text--dark
+  color: $color__text--dark;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .site-header__nav-item-active {
@@ -82,8 +84,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (min-width: 48rem) {
   .page-content {
-    max-width: 800px;
-    margin: 6rem auto 0;
+    max-width: 690px;
+    margin: 3rem auto 0;
   }
 }
 
@@ -174,8 +176,9 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 1em;
 }
 
-.content-box__image {
-
+.section__headline--link {
+  text-decoration: none;
+  color: $color__text--light
 }
 
 @import "pages/events";

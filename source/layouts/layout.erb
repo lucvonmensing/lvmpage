@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <meta content="width=device-width,initial-scale=1.0" name="viewport">
   <title><%= current_page.data.title || 'Luc von Mensing' %></title>
-  <%= javascript_include_tag :"webfontloader" %>
   <%= stylesheet_link_tag :styles %>
   <%= javascript_include_tag :webfontloader %>
   <%= favicon_tag 'favicon.ico' %>
@@ -18,11 +17,11 @@
 
 <body class="<%= page_classes %>">
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5W6559N" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<%= partial "layouts/components/header" %>
+<%= partial 'layouts/components/header' %>
 
 <style>
   .content__wrapper {
-    background-image: url(<%= image_path("images/default.jpg") %>);
+    background-image: url(<%= image_path('images/default.jpg') %>);
   }
 </style>
 

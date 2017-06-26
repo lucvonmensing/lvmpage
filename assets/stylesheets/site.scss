@@ -42,7 +42,6 @@ h1, h2, h3, h4, h5, h6 {
 .site-header {
   background-color: white;
   padding: .5rem 1rem;
-
 }
 
 @media (min-width: 48rem) {
@@ -50,6 +49,23 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.hero__headline {
+  font-size: 1.5rem;
+  color: $color__text--light;
+  font-family: "Droid Serif", serif;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .hero__headline {
+    font-size: 2.2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
 }
 

@@ -4,9 +4,12 @@ description: Hier könnt Ihr ein Bisschen was über die Band Luc von Mensing erf
 ---
 
 <section class="about">
-  <h3 class="section__subheadline"><%= data.wir.subheadline %></h3>
-  <h1 class="section__headline"><%= data.wir.title %></h1>
-  <div class="content-box__meta">
+  <h1 class="section__headline">Wir</h1>
+  <div class="content-box">
+    <div class="content-box__meta">
+      <div class="content-box__title events__title"><%= data.wir.subheadline %></div>
+      <div class="content-box__info events__type"><%= data.wir.title %></div>
+    </div>
     <%= tag :img, :alt => 'Die Band', :src => data.wir.image %>
     <div class="content-box__info">
       <% data.wir.copy.each do |p| %>

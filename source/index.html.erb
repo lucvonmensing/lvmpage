@@ -3,27 +3,31 @@ title: Luc von Mensing
 description: Sechs Jungs, deren Charaktere und musikalischen Einflüsse nicht unterschiedlicher sein könnten, formen den einzigartigen Luc von Mensing Sound.
 ---
 
-<h1 class="hero__headline">Sechs Jungs, deren Charaktere und musikalischen Einflüsse nicht unterschiedlicher sein könnten, formen den einzigartigen Luc von Mensing Sound.</h1>
+<h1 class="hero__headline"><%= data.frontpage.title %></h1>
 
-<div class="content-box">
+<section class="content-box">
   <div class="content-box__meta">
-    <div class="content-box__title events__title">Video</div>
-    <div class="content-box__info events__type"><a href="mailto:lucvonmensing@gmx.de">Luc von Mensing / Kurz nach</a></div>
+    <div class="content-box__title events__title"><%= data.frontpage.video_title %></div>
+    <div class="content-box__info events__type"><%= data.frontpage.video_subheadline %></div>
   </div>
-  <div class="responsive__video">
+  <div class="responsive-video responsive-video__hero">
     <iframe class="content__embedded-video" id="ytplayer" type="text/html" width="100%" height="100%"
             src="https://www.youtube.com/embed/<%= data.frontpage.video_id %>?autoplay=0&origin=https://www.lucvonmensing.de"
             frameborder="0"></iframe>
   </div>
-</div>
 
-<% if false %>
-<section class="container">
-  <h3 class="section__headline">
-    <a class="section__headline--link" href="https://instagram.com/lucvonmensing">
-      Folge uns auf Instagram
-    </a>
-  </h3>
+  <div class="text--center">
+  <a class="btn btn__cta btn__hero" target="_blank" href="https://www.youtube.com/channel/UCX0suhbN3wJv-V6S9K_EG3Q">Mehr
+    Videos</a>
+  </div>
+</section>
+
+<section class="content-box content-box--large">
+  <div class="content-box__meta">
+    <div class="content-box__title events__title"><%= data.frontpage.instagram_title %></div>
+    <div class="content-box__info events__type">
+      <a href="https://instagram.com/lucvonmensing"><%= data.frontpage.instagram_subheadline %></a></div>
+  </div>
   <div class="instagram">
     <% (1..6).each do |i| %>
         <div class="instagram__entry">
@@ -32,4 +36,3 @@ description: Sechs Jungs, deren Charaktere und musikalischen Einflüsse nicht un
     <% end %>
   </div>
 </section>
-<% end %>

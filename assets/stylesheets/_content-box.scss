@@ -1,0 +1,30 @@
+@import "colors";
+
+.content-box {
+  border-top: 1px solid $color__text--light;
+  text-align: left;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.content-box--large {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+@media (min-width: 48rem) {
+
+}
+
+.content-box__title {
+  color: $color__text--grey;
+  font-family: Roboto, sans-serif;
+}
+
+.content-box__info {
+  color: $color__text--light;
+}
+
+.content-box__meta {
+  padding-bottom: 1em;
+}

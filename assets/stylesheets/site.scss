@@ -26,6 +26,10 @@ img {
   display: inline-block;
 }
 
+.text--center {
+  text-align: center;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
 }
@@ -114,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.responsive__video iframe {
+.responsive-video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -122,12 +126,16 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
 }
 
-.responsive__video {
+.responsive-video {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 0;
   height: 0;
   overflow: hidden;
+}
+
+.responsive-video__hero {
+  margin-bottom: 3rem;
 }
 
 .social {
@@ -173,33 +181,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @import "grid";
-
-.content-box {
-  border-top: 1px solid $color__text--light;
-  text-align: left;
-}
-
-@media (min-width: 48rem) {
-
-}
-
-.content-box {
-  padding-top: 1em;
-  padding-bottom: 1em;
-}
-
-.content-box__title {
-  color: $color__text--grey;
-  font-family: Roboto, sans-serif;
-}
-
-.content-box__info {
-  color: $color__text--light;
-}
-
-.content-box__meta {
-  padding-bottom: 1em;
-}
+@import "instagram";
+@import "content-box";
 
 .section__headline--link {
   text-decoration: none;
@@ -208,3 +191,33 @@ h1, h2, h3, h4, h5, h6 {
 
 @import "pages/events";
 @import "pages/about";
+
+
+.btn {
+  padding: .4rem 1.5rem;
+  cursor: pointer;
+  background-color: transparent;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  transition: all .2s linear;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  display: inline-block;
+}
+
+.btn__cta {
+  color: $color__text--light;
+  border: 2px solid $color__text--light;
+
+  &:hover {
+    color: darken($color__text--light, 20);
+    border: 2px solid darken($color__text--light, 20);
+  }
+}
+
+.btn__hero {
+  margin: 0 auto;
+}

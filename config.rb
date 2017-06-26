@@ -41,3 +41,9 @@ configure :build do
   activate :minify_html
   activate :asset_hash
 end
+
+after_build do |builder|
+  src = File.join(config[:source], '_redirects')
+  dst = File.join(config[:build_dir], '_redirects')
+  FileUtils.cp src, dst
+end
